@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="nextQuestion()" class="quiz-container">
+    <div class="header">
+        <h1>Quiz Application</h1>
+        <p id="timer" class="timer">3:00</p>
+    </div>
+    
+    <div class="question-container">
+        <p id="ques" class="question"></p>
+
+        <div class="options">
+            <input onclick="clicked()" value="1" name="options" type="radio" id="option1">
+            <label for="option1" id="opt1" class="option"></label>
+
+            <input onclick="clicked()" value="2" name="options" type="radio" id="option2">
+            <label for="option2" id="opt2" class="option"></label>
+
+            <input onclick="clicked()" value="3" name="options" type="radio" id="option3">
+            <label for="option3" id="opt3" class="option"></label>
+        </div>
+
+        <button id="btn" disabled onclick="nextQuestion()" class="next-button">Next</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="app.js"></script>
+</body>
+</html>
